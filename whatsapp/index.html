@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando...</title>
+    <link rel="icon" href="https://i.postimg.cc/7YwzXwDz/image.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Pixel do Facebook - Evento Lead
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1885299531946213'); 
+        fbq('track', 'Lead');
+
+        // Redirecionar para WhatsApp com URL Deeplink
+        setTimeout(function() {
+            const phoneNumber = '553791078972';
+            const message = 'Ol%C3%A1,%20quero%20fazer%20o%20curso%20online%20de%20c%C3%ADlios';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.location.href = whatsappUrl;
+        }, 3000); // Redireciona em 3 segundos
+    </script>
+</head>
+<body>
+    <div class="container">
+        <p class="redirect-message">Redirecionando para o WhatsApp...</p>
+        <div class="loading-animation"></div>
+        <p>Se não for redirecionado automaticamente, <a href="https://wa.me/553791078972?text=Ol%C3%A1,%20quero%20fazer%20o%20curso%20online%20de%20c%C3%ADlios" class="redirect-link">clique aqui</a>.</p>
+    </div>
+</body>
+</html>
